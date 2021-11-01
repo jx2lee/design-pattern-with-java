@@ -1,6 +1,17 @@
 # _Design Pattern with Java_
 
 ## _Singleton_
+### _인스턴스를 오직 한개만 제공하도록 클래스를 구현하는 디자인 패턴_
+
+![image/singleton-pattern.png](image/singleton-pattern.png)
+
+### _예제_
+singleton 패턴으로 구현한 클래스를 살펴본다. 
+* 공통
+  * Settings: singleton 패턴을 적용한 클래스
+* Setting class 를 버젼별로 나누어 주석 작성
+  * V1~V7
+* 결과: static inner class 사용 권장 (V7)
 
 ## _Proxy_
 ### _실제 기능을 수행하는 객체(Real Object) 대신 가상의 객체(Proxy Object)를 사용해 로직의 흐름을 제어하는 디자인 패턴_
@@ -31,6 +42,9 @@
   * GameServiceProxyV2: lazy initialization (함수 호출 시 인스턴스 생성ㄴ)
 
 ## _Reference_
+* singleton
+  * [https://www.youtube.com/watch?v=OwOEGhAo3pI](https://www.youtube.com/watch?v=OwOEGhAo3pI)
+  * [https://www.youtube.com/watch?v=bHRETd1rFfc](https://www.youtube.com/watch?v=bHRETd1rFfc)
 * proxy
   * [https://www.youtube.com/watch?v=tes_ekyB6U8](https://www.youtube.com/watch?v=tes_ekyB6U8)
   * [https://www.youtube.com/watch?v=267d9IfwRdc](https://www.youtube.com/watch?v=267d9IfwRdc)

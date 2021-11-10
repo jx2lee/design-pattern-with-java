@@ -10,8 +10,14 @@ singleton 패턴으로 구현한 클래스를 살펴본다.
 * 공통
   * Settings: singleton 패턴을 적용한 클래스
 * Setting class 를 버젼별로 나누어 주석 작성
-  * V1~V7
+  * V1~V8
+  * V7: defacto
+  * V8: enum 으로 reflection API 를 통한 인스턴스 생성 불가
 * 결과: static inner class 사용 권장 (V7)
+* singleton 을 깨트릴 수 있는 방법 2가지
+  * reflection 을 사용하는 경우
+    * 단, SettingsV8 와 같이 enum 으로 정의된 경우 reflection API 로 singleton 을 깨뜨릴 수 없음
+  * 직렬 & 역직렬화 (대응가능, Serializable interface)
 
 ## _Proxy_
 ### _실제 기능을 수행하는 객체(Real Object) 대신 가상의 객체(Proxy Object)를 사용해 로직의 흐름을 제어하는 디자인 패턴_

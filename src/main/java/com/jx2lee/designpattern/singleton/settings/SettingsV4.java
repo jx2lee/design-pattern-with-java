@@ -1,4 +1,4 @@
-package com.jx2lee.designpattern.singleton.Settings;
+package com.jx2lee.designpattern.singleton.settings;
 
 public class SettingsV4 {
     /**

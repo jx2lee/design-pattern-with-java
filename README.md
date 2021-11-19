@@ -39,6 +39,21 @@ Client 에서 ShipFactory 를 이용해 Ship 클래스의 인스턴스를 생성
   * ![image/factory-pattern-diagram.png](image/factory-pattern-diagram.png)
 * afteruseabstract: factory 패턴 적용 & 추상 클래스 이용
 
+## _Abstract Factory_
+## _서로 관련 있는 여러 객체를 만들어주는 패턴(인터페이스 기반)으로 클라이언트 초점인 것이 특징_
+
+![image/abstract-factory-pattern.png](image/abstract-factory-pattern.png)
+
+### _factory pattern 과의 차이점_
+* 모양과 효과는 비슷: 객체 생성 과정을 추상화한 인터페이스를 제공
+* 관점
+  * abstract factory: factory 를 사용하는 방법에 초점 (composition)
+  * factory: factory 를 구현하는 방법에 초점 (composition)
+* 목적
+  * abstract factory: 여러 객체를 구체적인 클래스에 의존하지 않고 생성하는 것
+  * factory: 구체적인 객체 생성 과정을 하위 또는 구체적인 클래스로 옮기는 것
+
+
 ## _Proxy_
 ### _실제 기능을 수행하는 객체(Real Object) 대신 가상의 객체(Proxy Object)를 사용해 로직의 흐름을 제어하는 디자인 패턴_
 

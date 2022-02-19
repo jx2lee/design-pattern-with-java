@@ -92,7 +92,7 @@ Client 에서 ShipFactory 를 이용해 Ship 클래스의 인스턴스를 생성
 * 레스토랑 예시를 들면 다음과 같다.
   * Restaurant, Guest, Gym, CleaningService 클래스가 있다고 가정한다.
   * Restaurant & Gym 에서 청소를 위해 CleaningService 를 참조한다.
-  * 결합도를 낮추기 위해 청소 등을 FrontDesk 라는 클래스를 생성하여 이를 이용할 수 있다.
+  * 결합도를 낮추기 위해 청소 등을 **FrontDesk 라는 클래스를 생성**하여 이를 이용할 수 있다.
 
 #### _장단점_
 * 장점:
@@ -100,6 +100,10 @@ Client 에서 ShipFactory 를 이용해 Ship 클래스의 인스턴스를 생성
   * 각각의 컴포넌트 코드를 보다 간결하게 유지 가능
 * 단점:
   * 중재자 역할을 하는 클래스의 복잡도와 결합도가 증가
+
+#### _사용 예시_
+- java: `Executor`, `ExecutorService`
+- spring: `DispatcherServlet`
 
 # _Reference_
 * singleton

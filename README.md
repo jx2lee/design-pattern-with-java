@@ -83,6 +83,25 @@ Client 에서 ShipFactory 를 이용해 Ship 클래스의 인스턴스를 생성
   * GameServiceProxyV1: 생성자로 직접 interface 를 참조
   * GameServiceProxyV2: lazy initialization (함수 호출 시 인스턴스 생성ㄴ)
 
+## _객체 생성 관련 패턴_
+### _Adapter (어댑터) pattern_
+#### _기존 코드를 클라이언트가 사용하는 인터페이스의 구현체로 변경하는 패턴_
+![](image/adapter-pattern.png)
+
+#### _장단점_
+* 장점:
+  * 기존 코드 (`Account` & `AccountService`) 를 변경하지 않고 interface 구현체를 만들어 재사용 (OCP) 
+  * 기존 코드 (`Account` & `AccountService`) 일과 특정 interface 구현체로 변환하는 작업을 각기 다른 클래스로 분리하여 관리 (SRP)
+* 단점:
+  * **새로운 클래스가 생겨 복잡도 증가**
+    * 경우에 따라서는 기존 코드를 변경하여 interface 구현체로 변경하는 것이 더 나은 선택이 될 수 있음
+
+#### _예제_
+* before & after
+* 클라이언트에서 사용하는 `Account` & `AccountService` 와, 외부 패키지로 사용하는 security 를 이용하고자 할 때
+* `AccountUserDetails` & `AccountUserDetailsService` 를 각 security 인터페이스(`UserDetails`, `UserDetailsService`)를 상속받아 기능을 구현한다.
+* 기존 코드(`Account` & `AccountService`) 를 변경하지 않고 Account 와 security 를 이어주는 기능을 interface 구현체로 따로 분리함
+
 ## _행동 관련 디자인 패턴_
 ### _Mediator pattern_
 #### _여러 객체들 간 소통하는 방법을 캡슐화하는 패턴_
@@ -113,3 +132,5 @@ Client 에서 ShipFactory 를 이용해 Ship 클래스의 인스턴스를 생성
   * [https://www.youtube.com/watch?v=tes_ekyB6U8](https://www.youtube.com/watch?v=tes_ekyB6U8)
   * [https://www.youtube.com/watch?v=267d9IfwRdc](https://www.youtube.com/watch?v=267d9IfwRdc)
   * [https://www.youtube.com/watch?v=z52yw8fnUSA](https://www.youtube.com/watch?v=z52yw8fnUSA)
+* other...
+  * [https://www.inflearn.com/course/디자인-패턴](https://www.inflearn.com/course/디자인-패턴)
